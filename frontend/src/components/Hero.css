@@ -1,5 +1,5 @@
 .hero-section {
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, #f8fcf9 0%, #e8f5ed 50%, #f0f9f4 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -7,6 +7,42 @@
   position: relative;
   text-align: center;
   padding: 7rem 1.5rem 3rem;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(143, 236, 120, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 20s ease-in-out infinite;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(129, 221, 103, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.1);
+  }
 }
 
 .hero-content {
