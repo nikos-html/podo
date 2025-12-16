@@ -1,11 +1,12 @@
 ╔══════════════════════════════════════════════════════════╗
 ║         RAILWAY DEPLOYMENT - QUICK START                 ║
+║         (Updated: Node.js 20)                            ║
 ╚══════════════════════════════════════════════════════════╝
 
 📋 KROK 1: Push na GitHub
 ───────────────────────────────────────────────────────────
 git add railway.toml nixpacks.toml package.json start.sh .dockerignore
-git commit -m "Add Railway deployment"
+git commit -m "Update to Node.js 20 for Railway deployment"
 git push origin main
 
 🚂 KROK 2: Deploy na Railway  
