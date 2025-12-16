@@ -146,9 +146,21 @@
 .hero-cta-group {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  animation: cta-appear 1.2s ease-out 0.4s both;
+}
+
+@keyframes cta-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-cta-primary {
