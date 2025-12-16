@@ -1,0 +1,56 @@
+╔══════════════════════════════════════════════════════════╗
+║         RAILWAY DEPLOYMENT - QUICK START                 ║
+╚══════════════════════════════════════════════════════════╝
+
+📋 KROK 1: Push na GitHub
+───────────────────────────────────────────────────────────
+git add railway.toml nixpacks.toml package.json start.sh .dockerignore
+git commit -m "Add Railway deployment"
+git push origin main
+
+🚂 KROK 2: Deploy na Railway  
+───────────────────────────────────────────────────────────
+1. Idź na: https://railway.app/
+2. Zaloguj się przez GitHub
+3. Kliknij "New Project"
+4. Wybierz "Deploy from GitHub repo"
+5. Wybierz swoje repo PodoNova
+6. Railway automatycznie:
+   ✅ Wykryje nixpacks.toml
+   ✅ Zainstaluje zależności
+   ✅ Zbuduje aplikację
+   ✅ Wdroży stronę
+
+⏱️ KROK 3: Czekaj ~2-3 minuty
+───────────────────────────────────────────────────────────
+Railway pokaże logi buildu w czasie rzeczywistym.
+Po zakończeniu dostaniesz URL typu:
+https://podonova-production-xxxx.up.railway.app
+
+✅ KROK 4: Sprawdź czy działa
+───────────────────────────────────────────────────────────
+Otwórz URL w przeglądarce.
+Powinieneś zobaczyć stronę PodoNova!
+
+╔══════════════════════════════════════════════════════════╗
+║  ⚠️  PROBLEMY?                                           ║
+╚══════════════════════════════════════════════════════════╝
+
+Jeśli build failuje, w Railway Dashboard → Settings → Build:
+- Build Command: cd frontend && yarn install && yarn build  
+- Start Command: npx serve -s frontend/build -l $PORT
+
+Redeploy i sprawdź logi!
+
+╔══════════════════════════════════════════════════════════╗
+║  📁 WAŻNE PLIKI (MUSZĄ BYĆ NA GITHUB)                   ║
+╚══════════════════════════════════════════════════════════╝
+✓ railway.toml
+✓ nixpacks.toml  
+✓ package.json (root)
+✓ start.sh
+✓ frontend/package.json
+✓ frontend/yarn.lock ← BARDZO WAŻNE!
+✓ frontend/src/ (cały folder)
+
+To wszystko! Powodzenia! 🚀
