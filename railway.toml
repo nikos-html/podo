@@ -1,7 +1,9 @@
 [build]
-builder = "nixpacks"
+builder = "NIXPACKS"
+buildCommand = "cd frontend && yarn install && yarn build"
 
 [deploy]
 startCommand = "npx serve -s frontend/build -l $PORT"
 healthcheckPath = "/"
 restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
