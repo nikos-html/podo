@@ -1,0 +1,150 @@
+.pricing-section {
+  padding: 5rem 0;
+  background: var(--bg-page);
+}
+
+.pricing-table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+}
+
+.pricing-table thead {
+  background: var(--bg-section);
+  border-bottom: 2px solid var(--border-medium);
+}
+
+.pricing-table th {
+  padding: 1rem;
+  text-align: left;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-table td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pricing-row {
+  transition: background 0.2s ease;
+}
+
+.pricing-row:hover {
+  background: var(--accent-wash);
+}
+
+.service-name-cell {
+  max-width: 400px;
+}
+
+.service-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-name-text {
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.service-desc-text {
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.duration-cell {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.price-cell {
+  white-space: nowrap;
+}
+
+.price-text {
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--accent-text);
+}
+
+.action-cell {
+  text-align: right;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  min-height: 36px;
+  font-size: 0.875rem;
+}
+
+.pricing-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.note-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  cursor: default;
+}
+
+.note-card:hover {
+  transform: none;
+}
+
+.note-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.note-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 968px) {
+  .pricing-table th:nth-child(2),
+  .pricing-table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 3rem 0;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .service-name-text {
+    font-size: 0.875rem;
+  }
+
+  .pricing-notes {
+    grid-template-columns: 1fr;
+  }
+}
