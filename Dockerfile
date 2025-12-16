@@ -3,10 +3,13 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy frontend files
-COPY frontend/package.json frontend/yarn.lock ./
-RUN yarn install --frozen-lockfile
+# Copy package files from frontend directory
+COPY frontend/package.json frontend/yarn.lock* ./
 
+# Install dependencies
+RUN yarn install --frozen-lockfile --network-timeout 100000
+
+# Copy all frontend source files
 COPY frontend/ ./
 
 # Build the React app
@@ -18,13 +21,13 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Install serve globally
-RUN npm install -g serve
+RUN npm install -g serve@14.2.0
 
 # Copy built files from builder
 COPY --from=builder /app/build ./build
 
-# Expose port
-EXPOSE 3000
+# Expose port (Railway will set this dynamically)
+EXPOSE $PORT
 
-# Start the app
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Start the app on Railway's dynamic port
+CMD serve -s build -l $PORT
