@@ -1,24 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-        <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-        <title>Emergent | Fullstack App</title>
+        <meta name="theme-color" content="#8FEC78" />
+        
+        <!-- SEO Meta Tags -->
+        <title>PodoNova - Gabinet Podologiczny w Deszcznie | Profesjonalna podologia Gorzów Wielkopolski</title>
+        <meta name="description" content="Profesjonalny gabinet podologiczny w Deszcznie. Specjalizujemy się w leczeniu modzeli, odcisków, wrastających paznokci, pękających pięt i grzybicy. Najwyższe standardy higieny. Umów wizytę online!" />
+        <meta name="keywords" content="podolog Deszczno, gabinet podologiczny Deszczno, podolog Gorzów Wielkopolski, pedicure podologiczny, usuwanie modzeli, wrastające paznokcie, pękające pięty, grzybica paznokci, stopa cukrzycowa, podolog lubuskie" />
+        <meta name="author" content="PodoNova - Gabinet Podologiczny" />
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="PodoNova - Profesjonalny Gabinet Podologiczny w Deszcznie" />
+        <meta property="og:description" content="Kompleksowa opieka podologiczna. Najwyższe standardy higieny. Bezbolesne zabiegi. Umów wizytę online 24/7." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://customer-assets.emergentagent.com/job_podonova/artifacts/9ai7iger_image.png" />
+        <meta property="og:locale" content="pl_PL" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PodoNova - Gabinet Podologiczny w Deszcznie" />
+        <meta name="twitter:description" content="Profesjonalna podologia. Umów wizytę online!" />
+        <meta name="twitter:image" content="https://customer-assets.emergentagent.com/job_podonova/artifacts/9ai7iger_image.png" />
+        
+        <!-- Structured Data - Local Business -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "PodoNova - Gabinet Podologiczny",
+          "image": "https://customer-assets.emergentagent.com/job_podonova/artifacts/9ai7iger_image.png",
+          "description": "Profesjonalny gabinet podologiczny w Deszcznie oferujący kompleksową opiekę nad zdrowiem stóp",
+          "@id": "https://booksy.com/pl-pl/304698_podonova_podologia_17956_deszczno",
+          "url": "https://booksy.com/pl-pl/304698_podonova_podologia_17956_deszczno",
+          "telephone": "+48XXXXXXXXX",
+          "priceRange": "100-250 PLN",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Lubuska 107",
+            "addressLocality": "Deszczno",
+            "postalCode": "66-446",
+            "addressRegion": "Lubuskie",
+            "addressCountry": "PL"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.6547,
+            "longitude": 15.1847
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "23",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "medicalSpecialty": "Podiatry",
+          "availableService": [
+            {
+              "@type": "MedicalProcedure",
+              "name": "Konsultacja podologiczna",
+              "description": "Konsultacja obejmuje zebranie wywiadu, omówienie stanu skóry i paznokci, ustalenie planu terapii"
+            },
+            {
+              "@type": "MedicalProcedure",
+              "name": "Podstawowy zabieg podologiczny",
+              "description": "Skrócenie paznokci, oczyszczenie wałów paznokciowych, opracowanie zrogowaceń na stopach"
+            },
+            {
+              "@type": "MedicalProcedure",
+              "name": "Leczniczy zabieg podologiczny",
+              "description": "Podstawowy zabieg podologiczny z opracowaniem modzeli, odcisków i pękających pięt"
+            },
+            {
+              "@type": "MedicalProcedure",
+              "name": "Usuwanie modzeli i odcisków",
+              "description": "Skuteczne usunięcie bolesnych modzeli i odcisków"
+            },
+            {
+              "@type": "MedicalProcedure",
+              "name": "Leczenie wrastających paznokci",
+              "description": "Podcięcie wrastającego paznokcia i założenie klamry ortonyksyjnej"
+            }
+          ]
+        }
+        </script>
+        
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>
     <body>
