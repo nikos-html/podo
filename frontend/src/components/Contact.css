@@ -1,0 +1,152 @@
+.contact-section {
+  padding: 5rem 0;
+  background: var(--bg-section);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  cursor: default;
+}
+
+.contact-card:hover {
+  transform: none;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-wash);
+  border-radius: 12px;
+}
+
+.contact-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-details h3 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.contact-details p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-text);
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.hours-time {
+  color: var(--text-secondary);
+}
+
+.contact-cta-card {
+  background: var(--accent-wash);
+  border: 2px solid var(--accent-strong);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.contact-cta-card h3 {
+  margin: 0;
+}
+
+.contact-cta-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.btn-full {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-map {
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-map {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-map {
+    min-height: 300px;
+  }
+
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
