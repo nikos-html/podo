@@ -1,0 +1,82 @@
+.about-section {
+  padding: 5rem 0;
+  background: var(--bg-page);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-intro {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.about-feature h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.about-feature p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.about-cta {
+  margin-top: 1rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.clinic-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 0;
+  }
+}
