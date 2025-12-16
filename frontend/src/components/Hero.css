@@ -86,13 +86,42 @@
 
 .hero-title {
   margin: 0;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+  animation: title-appear 0.8s ease-out;
+}
+
+@keyframes title-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-accent {
-  background: linear-gradient(to right, var(--accent-text), var(--accent-strong));
+  background: linear-gradient(135deg, #0d7916 0%, #10a01e 50%, #8FEC78 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  position: relative;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent-strong), transparent);
+  border-radius: 2px;
+  opacity: 0.6;
 }
 
 .hero-subtitle {
