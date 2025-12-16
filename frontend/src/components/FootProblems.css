@@ -1,0 +1,76 @@
+.problems-section {
+  padding: 5rem 0;
+  background: var(--bg-section);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.problem-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.problem-icon-wrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-wash);
+  border-radius: 8px;
+  color: var(--accent-text);
+}
+
+.problem-content {
+  flex: 1;
+}
+
+.problem-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.problem-description {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.problems-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .problems-section {
+    padding: 3rem 0;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
