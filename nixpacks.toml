@@ -2,10 +2,20 @@
 nixPkgs = ['nodejs-18_x', 'yarn']
 
 [phases.install]
-cmds = ['cd frontend && yarn install --frozen-lockfile']
+cmds = [
+  'echo "📦 Installing dependencies..."',
+  'cd frontend',
+  'yarn install --frozen-lockfile --network-timeout 100000'
+]
 
 [phases.build]
-cmds = ['cd frontend && yarn build']
+cmds = [
+  'echo "🔨 Building React app..."',
+  'cd frontend',
+  'yarn build',
+  'echo "✅ Build complete!"',
+  'ls -la build/'
+]
 
 [start]
 cmd = 'npx serve -s frontend/build -l $PORT'
