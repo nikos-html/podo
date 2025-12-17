@@ -45,7 +45,7 @@ const FootProblems = () => {
         <div className="problems-cta">
           <p className="body-large">Masz problem ze stopami?</p>
           <a href={booksyUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Skońsultuj się z podologiem
+            Skonsultuj się z podologiem
           </a>
         </div>
       </div>
